@@ -35,7 +35,7 @@ function NavigatioCatagory() {
 
             <button
               type="button"
-              className="btn-close"
+              className="btn-close btn-offcanvas-close"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>

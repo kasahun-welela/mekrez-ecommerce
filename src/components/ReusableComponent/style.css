@@ -10,6 +10,9 @@
 .item-left-side {
   margin-left: 400px;
 }
+.btn-offcanvas-close {
+  color: rgb(128, 4, 4);
+}
 .slider-image {
   /* height: 700px;
   max-width: 100%; */

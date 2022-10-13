@@ -59,7 +59,7 @@ function NavigationBar() {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="www.kwk.com">
+                  <a className="dropdown-item" href="/login">
                     Login
                   </a>
                 </li>
@@ -71,8 +71,8 @@ function NavigationBar() {
               </ul>
             </li>
             <li className="nav-item  my-lg-0">
-              <a className="nav-link ml-7" href="www.kwk.com/limlbbb">
-                Link
+              <a className="nav-link ml-7" href="/about">
+                About Us
               </a>
             </li>
           </ul>
