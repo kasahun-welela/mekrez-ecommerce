@@ -1,0 +1,123 @@
+.nav-c {
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+.top-nav {
+  margin-left: 30px;
+}
+.nav-search-box {
+  width: 800px;
+}
+.item-left-side {
+  margin-left: 400px;
+}
+.slider-image {
+  /* height: 700px;
+  max-width: 100%; */
+}
+.slider-container {
+  margin: auto;
+  width: 60%;
+  align-items: center;
+  /* padding: 10px; */
+  border: #f31506;
+}
+.slider-btn {
+  /* margin-top: 30; */
+}
+.navigation_link {
+  background-color: rebeccapurple;
+  color: red;
+}
+li {
+  text-decoration: none;
+}
+.h-divider {
+  /* margin-top: 5px;
+  margin-bottom: 5px; */
+  height: 2px;
+  width: 100%;
+  border-top: 1px solid gray;
+}
+.offCanvas-title {
+  background-color: #232f3e;
+  color: white;
+}
+.category-list {
+  display: flex;
+}
+.category-list-sign {
+  align-items: flex-end;
+  height: 100%;
+  font-weight: bold;
+  font-size: 20px;
+}
+.category-list-name {
+  width: 90%;
+  font-weight: bold;
+  font-size: 20px;
+}
+.category-list:hover {
+  background-color: #3f38b7;
+  color: whitesmoke;
+}
+.bottom-nav {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.bottom-nav-element {
+  display: flex;
+  margin-left: 20px;
+}
+.bottom-nav-li {
+  margin-left: 10px;
+  padding: 4px;
+}
+.all-btn {
+  background-color: #232f3e;
+  color: white;
+  padding: 10px;
+  margin: 3px;
+}
+.icon-three {
+  color: white;
+}
+.card-container {
+  /* width: 18rem;   individual card container*/
+  /* margin-left: 20px; */
+  padding-top: 10px;
+  /* margin-top: 20px; */
+  align-items: center;
+  height: 430px;
+}
+.card-img {
+  width: 70%;
+  height: 200px;
+  /* padding: 10px;
+  margin-left: 14px; */
+}
+.all-card-holder {
+  border: #f31506;
+  border-style: dotted;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.cards-cc {
+  display: flex;
+  flex-direction: column;
+  /* margin-left: -50px; */
+}
+.card-column {
+  margin: 1px;
+  border: #05c786;
+  border-style: dotted;
+  margin-right: 10px;
+  padding-left: -40px;
+}
+.footer {
+  margin-top: 20px;
+  border: #f31506;
+  color: #05c786;
+  align-items: center;
+  background-color: whitesmoke;
+}

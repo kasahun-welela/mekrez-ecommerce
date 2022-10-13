@@ -1,10 +1,19 @@
 import "./App.css";
+import Card from "./components/ReusableComponent/Card";
+import Footer from "./components/ReusableComponent/Footer";
+import NavigatioCatagory from "./components/ReusableComponent/NavigatioCatagory";
+import NavigationBar from "./components/ReusableComponent/NavigationBar";
+import Slider from "./components/ReusableComponent/Slider";
 
 function App() {
   return (
-    <h1 class="text-3xl text-center text-red-300 font-bold underline">
-      Hello world!
-    </h1>
+    <div>
+      <NavigationBar />
+      <NavigatioCatagory />
+      <Slider />
+      <Card />
+      <Footer />
+    </div>
   );
 }
 
