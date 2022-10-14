@@ -122,5 +122,7 @@ li {
   border: #f31506;
   color: #05c786;
   align-items: center;
-  background-color: whitesmoke;
+  text-align: center;
+  background-color: rgb(14, 13, 13);
+  height: 300px;
 }
