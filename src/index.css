@@ -1,7 +1,7 @@
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-/* @tailwind base;
+/* @import "../node_modules/bootstrap/dist/css/bootstrap.min.css"; */
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

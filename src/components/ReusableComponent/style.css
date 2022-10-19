@@ -109,6 +109,8 @@ li {
   display: flex;
   flex-direction: column;
   /* margin-left: -50px; */
+  /* overflow-x: auto;
+  flex-wrap: nowrap; */
 }
 .card-column {
   margin: 1px;
@@ -125,4 +127,16 @@ li {
   text-align: center;
   background-color: rgb(14, 13, 13);
   height: 300px;
+}
+.loginContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+.loginCard {
+  border: #f31506;
+  border-style: groove;
+  height: 400px;
+  margin: 20px;
+  padding: 20px;
+  color: #05c786;
 }

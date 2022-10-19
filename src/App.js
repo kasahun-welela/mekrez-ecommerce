@@ -1,18 +1,17 @@
 import "./App.css";
 import Card from "./components/ReusableComponent/Card";
 import Footer from "./components/ReusableComponent/Footer";
-import NavigatioCatagory from "./components/ReusableComponent/NavigatioCatagory";
+
 import NavigationBar from "./components/ReusableComponent/NavigationBar";
-import Slider from "./components/ReusableComponent/Slider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutUS from "./components/ReusableComponent/AboutUS";
 import Login from "./components/LoginElement/Login";
+import SignUp from "./components/LoginElement/SignUp";
 
 function App() {
   return (
     <div>
       <NavigationBar />
-      <NavigatioCatagory />
 
       <BrowserRouter>
         <Routes>
@@ -20,12 +19,13 @@ function App() {
             path="/"
             element={
               <>
-                <Slider />
+                {/* <Slider /> */}
                 <Card />
               </>
             }
           />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/about" element={<AboutUS />} />
         </Routes>
       </BrowserRouter>
