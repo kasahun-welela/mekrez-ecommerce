@@ -66,8 +66,8 @@ function Login() {
               <label for="remember" className="flex items-center w-1/2">
                 <input
                   type="checkbox"
-                  name=""
-                  id=""
+                  name="remember"
+                  id="remember"
                   className="mr-1 bg-white shadow"
                 />
                 <span className="text-sm text-gray-700 pt-1">Remember Me</span>

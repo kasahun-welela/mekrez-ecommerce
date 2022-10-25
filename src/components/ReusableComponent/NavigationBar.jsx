@@ -1,27 +1,53 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
-// import { Link, NavLink } from "react-router-dom";
-// import {B} "../../../bootrap-icon"
-import {
-  Navbar,
-  Dropdown,
-  Avatar,
-} from "flowbite-react/lib/cjs/components/Badge";
+
 import { BsSearch, BsCartFill, BsHeart, BsPerson } from "react-icons/bs";
 import { FaGlobe } from "react-icons/fa";
-import { FaHeart, FaUser } from "react-icons/fa";
+import axios from "axios";
+import { gql, useQuery } from "@apollo/client";
 
 function NavigationBar() {
+  const [navData, setNavData] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const result = await axios
+        .post(
+          "https://countries.trevorblades.com/",
+          {
+            query: `
+        query {
+          continents {
+            name
+          }
+        }
+      `,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        .then(function (response) {
+          let result = response.data.data.continents;
+          setNavData(result);
+        });
+    };
+    getData();
+  }, []);
+
+  console.log(navData);
   const [navbar, setNavbar] = useState(false);
   const widthHeader = navbar ? "400px" : "500px";
-  const iconDisplay = navbar ? "block" : "flex";
+
   return (
     <nav className="w-full pb-3 bg-white text-violet-600 shadow-lg">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 ">
             {/* <Link to="./"> */}
-            <img src="../logo192.png" className="w-20 h-20" />
+            <img src="../logo192.png" className="w-20 h-20" alt="mekres logo" />
             <h2 className="text-2xl font-bold ml-10">Mekrez</h2>
             {/* </Link> */}
             <div className="md:hidden">
@@ -70,7 +96,7 @@ function NavigationBar() {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li>
-                <div class="pt-2 relative mx-auto  text-blue-600">
+                <div className="pt-2 relative mx-auto  text-blue-600">
                   <input
                     style={{
                       width: `${widthHeader}`,
@@ -80,7 +106,7 @@ function NavigationBar() {
                     name="search"
                     placeholder="Search product"
                   />
-                  <button type="submit" class="-ml-14 h-10 w-14 my-0 mr-0">
+                  <button type="submit" className="-ml-14 h-10 w-14 my-0 mr-0">
                     {/* search icon */}
                     <BsSearch />
                   </button>
@@ -130,36 +156,14 @@ function NavigationBar() {
         }`}
       >
         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-          <li className="text-gray-600 hover:text-black hover:bg-gray-200">
-            Electronics
-          </li>
-          <li className="text-gray-600 hover:text-black  hover:bg-gray-200">
-            Books
-          </li>
-          <li className="text-gray-600 hover:text-black  hover:bg-gray-200">
-            Computers
-          </li>
-          <li className="text-gray-600 hover:text-black  hover:bg-gray-200">
-            Arts and crafts
-          </li>
-          <li className="text-gray-600 hover:text-black  hover:bg-gray-200">
-            Software
-          </li>
-          <li className="text-gray-600 hover:text-black  hover:bg-gray-200">
-            Girls Fashion
-          </li>
-          <li className="text-gray-600 hover:text-black  hover:bg-gray-200">
-            Boys Fashion
-          </li>
-          <li className="text-gray-600 hover:text-black  hover:bg-gray-200">
-            Kitchen and Appliance
-          </li>
-          <li className="text-gray-600 hover:text-black  hover:bg-gray-200">
-            Spare Parts
-          </li>
-          <li className="text-gray-600 hover:text-black  hover:bg-gray-200">
-            Decor
-          </li>
+          {navData.map((items, keys) => (
+            <li
+              className="text-gray-600 hover:text-black hover:bg-gray-200"
+              key={keys}
+            >
+              {items.name}
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
